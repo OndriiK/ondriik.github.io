@@ -1,0 +1,1009 @@
+/* this is a stylesheet for the web-page of distinguished gentleman Sheldon Cooper phd. */
+
+
+/* defining animation for a cursor */
+@keyframes blink {
+    from, to {
+        color: white;
+    }
+    50% {
+        color: transparent;
+    }
+}
+
+/*-------------------general section-------------------------*/
+
+/* general rule */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 768px) {
+    /* the main content takes up the whole page */
+    body {
+        margin: 0;
+        width: 100%;
+        font-family: "Courier New", Courier, monospace;
+        color: #0CEC00;
+    }
+
+    body #page-body {
+        width: 100%;
+        background-color: #000000;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    /* body is a flex holding the main content and nav */
+    body {
+        display: flex;
+        flex-direction: row;
+        margin: 0;
+        width: 100%;
+        font-family: "Courier New", Courier, monospace;
+        color: #0CEC00;
+    }
+
+    body #page-body {
+        order: 1;
+        width: 80%;
+        background-color: #000000;
+        
+    }
+
+    body #navigation {
+        order: 2;
+        width: 20%;
+        background-color: #000000;
+        border-left: 5px dashed #0CEC00;
+        z-index: 2;
+        
+    }
+}
+
+/*-------------------header section-------------------------*/
+
+#main-title {
+    height: 100px;
+}
+
+/* general rule for h2 */
+h2 {
+    font-size: 2.5rem;
+    padding-left: 30px;
+    padding-top: 40px;
+    padding-bottom: 30px;
+    margin: 0;
+
+}
+
+/*-------------------navigation section-------------------------*/
+
+@media screen and (max-width: 767.9px) {
+    /* navigation is moved to the side so its out of view */
+    body #navigation {
+        position: fixed;
+        height:100%;
+        width: 40%;
+        right: -40%;
+        background-color: #000000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-left: #0CEC00 2px dashed;
+        z-index: 7;
+        transition: right 0.5s ease;
+    }
+    #navigation nav {
+        width: 80%;
+    }
+
+    /* display the burger-menu button when on a mobile phone */
+    /* nav is slid in when the button is pressed */
+    #burger-button {
+        color: white;
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        font-size: 30px;
+        background: none;
+        border: none;
+        z-index: 7;
+    }
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199.9px) {
+    /* navigation is displayed on the side */
+    nav {
+        position: fixed;
+        transform: translate(20%, 70%);
+    }
+
+    #burger-button {
+        display: none;
+    }
+}
+
+
+
+@media screen and (min-width: 1200px) {
+    /* same as for tablet but wider nav */
+    nav {
+        position: fixed;
+        transform: translate(40%, 70%);
+        transition: transform 0.5s ease;
+    }
+
+    #burger-button {
+        display: none;
+    }
+}
+
+/* styling the navigation */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+nav ul li {
+    padding-top: 4%;
+    padding-bottom: 4%;
+}
+
+nav ul li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 10px;;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+nav ul li a:hover {
+    background-color: #A2FF8E;
+    color: #000000;
+    font-weight: bold;
+}
+
+nav ul li a.active {
+    border: 2px solid #0CEC00;
+    border-radius: 10px;
+}
+
+/* overlay for the burger-menu navigation */
+#nav-overlay {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 5;
+}
+
+
+
+/*-------------------intro section-------------------------*/
+
+@media screen and (max-width: 768px) {
+    /* display the intro in a column (photo, then about) */
+    #intro {
+        flex-direction: column;
+        align-items: center;
+        display: flex;
+        border-bottom: #0CEC00 2px solid;
+        padding-bottom: 10%;
+        padding-top: 5%;
+    }
+
+    #intro img {
+        width: 50%;
+        min-width: 20%;
+        aspect-ratio: 1/1;
+        border-radius: 50%;
+        object-fit: cover;
+        height: auto;
+        order: 1;
+        border: #0CEC00 5px solid;
+    }
+
+    #title-and-info {
+        margin-left: 0;
+        text-align: center;
+        order: 2;
+    }
+
+    #my_info h2 {
+        padding: 10px;
+        text-align: center;
+    }
+
+    #my_info {
+        justify-content: center;
+    }
+
+    #terminal-window {
+        font-family: 'Courier New', monospace;
+        background-color: #000000;
+        border: 1px solid #0CEC00;
+        color: white;
+        padding: 10px;
+        min-height: 300px;
+        width: 450px;
+    }
+
+    #social-media-intro {
+        margin-top: 20px;
+    }
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199.9px) {
+    /* display the intro in a row (photo, then about) */
+    #intro {
+        height: 100%;
+        margin: 0 0 5% 0;
+        padding-top: 15%;
+        padding-bottom: 5%;
+        position: relative;
+        border-bottom: #0CEC00 2px solid;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;   
+    }
+
+    #intro img {
+        width: 30%;
+        height: 30%;
+        aspect-ratio: 1/1;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-left: 25px;
+        margin-right: 25px;
+        border: 5px solid #0CEC00;
+    }
+
+    /* add a little gap from the edge of the page */
+    #title-and-info {
+        margin-left: 5%;
+    }
+
+    /* style the About Me window */
+    #terminal-window {
+        font-family: 'Courier New', monospace;
+        background-color: #000000;
+        border: 1px solid #0CEC00;
+        color: white;
+        padding: 10px;
+        width: 450px;
+        min-height: 300px;
+    }
+    
+    #social-media-intro {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        padding: 0 15px 15px 0;
+    }
+}
+
+
+@media screen and (min-width: 1200px) {
+
+    #intro {
+        height: 100%;
+        margin: 0 0 5% 0;
+        padding-top: 15%;
+        padding-bottom: 5%;
+        position: relative;
+        border-bottom: #0CEC00 2px solid;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;  
+    }
+
+    #title-and-info {
+        margin-left: 5%;
+    }
+
+    #intro img {
+        width: 30%;
+        height: 30%;
+        aspect-ratio: 1/1;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-left: 25px;
+        margin-right: 25px;
+        border: 5px solid #0CEC00;
+    }
+
+    #terminal-window {
+        font-family: 'Courier New', monospace;
+        background-color: #000000;
+        border: 1px solid #0CEC00;
+        color: white;
+        padding: 10px;
+        width: 550px;
+        min-height: 300px;
+    }
+
+    #social-media-intro {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        padding: 0 15px 15px 0;
+    }
+
+}
+
+#my_info {
+    display: flex;
+    align-items: center;
+}
+
+#my_info h2 {
+    padding: 10px;
+}
+
+/* style the bar for the terminal */
+#terminal-bar {
+    background-color: #0CEC00;
+    padding: 5px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#close-button {
+    background-color: #FF0000;
+    color: white;
+    border: none;
+    padding: 0 5px;
+    cursor: pointer;
+}
+
+#terminal-window p:not(.hidden) {
+    padding: 10px;
+    margin-top: 10px;
+    color: white;
+    font-size: 1.2rem;
+}
+
+/* add the cursor for the typing effect */
+#terminal-window p:not(.hidden)::after {
+    content: '▌';
+    animation: blink 1s step-end infinite;
+    font-weight: bold;
+    color: white;
+}
+
+#toggle-button {
+    font-size: 25px;
+    border: none;
+    background: none;
+    color: white;
+    transition: transform 0.4s ease;
+}
+
+#toggle-button:hover {
+    color: #0CEC00;
+    transform: scale(1.2);
+    transition: transform 0.5s ease;
+}
+
+#social-media-intro a:hover {
+    color: #0CEC00;
+    font-size: 3em;
+    transition: font-size 0.5s ease;
+}
+
+#social-media-intro a {
+    transition: font-size 0.5s ease;
+}
+
+
+/*-------------------education section-------------------------*/
+
+/* Change the text's size according to the window width */
+@media screen and (max-width: 767.99px) {
+    .education-paragraph {
+        font-size: 1.5em;
+    }
+    #education ul li span {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199.9px) {
+    .education-paragraph {
+        font-size: 1.8em;
+    }
+    #education ul li span {
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .education-paragraph {
+        font-size: 2.2em;
+    }
+    #education ul li span {
+        font-size: 1.2rem;
+    }
+}
+
+#education {
+    position: relative;
+    z-index: 4;
+    padding-bottom: 10%;
+    background-color: #000000;
+    border-bottom: #0CEC00 2px solid;
+}
+
+#education span {
+    font-size: 1.2rem;
+    color: white;
+}
+
+#education ul {
+    list-style-type: none;
+    padding-left: 60px;
+    
+}
+
+#education ul li {
+    padding: 10px 0 10px;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+#education ul li span {
+    display: block;
+    float: left;
+}
+
+.close-button {
+    display: none;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    font-size: 45px;
+    border: none;
+    background: none;
+    color: white;
+    z-index: 6;
+}
+
+#education ul li {
+    display: block;
+}
+
+.year {
+    margin-left: 15%;
+    font-size: 1.2rem;
+    color: white;
+}
+
+.year::before {
+    content: "|\A*-";
+    white-space: pre;
+    z-index: 1;
+}
+
+.education-paragraph {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 80%;
+    padding: 60px;
+    z-index: 6;
+    color: white;
+    font-family: "Courier New", Courier, monospace;
+    font-weight: bold;
+}
+
+.description-toggle-button {
+    margin-left: 10px;
+    border: none;
+    background: none;
+    color: white;
+    font-size: 20px;
+    font-weight: 900;
+    font-weight: bold;
+    transition: transform 0.4s ease;
+}
+
+.description-toggle-button i {
+    display: flex;
+}
+
+.education-paragraph.shown::after {
+    content: '|';
+    animation: blink 1s step-end infinite;
+    font-weight: bold;
+}
+
+.description-toggle-button:hover {
+    color: #0CEC00;
+    transform: scale(1.4);
+    transition: transform 0.4s ease;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+.description-toggle-button i:after {
+    content: "";
+    flex-grow: 1;
+    height: 2px;
+    background-image: linear-gradient(to right, white 50%, transparent 50%);
+    background-size: 5px 1px;
+    background-repeat: repeat;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 6;
+}
+
+
+/*-------------------skills section-------------------------*/
+
+#skills {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    border-bottom: #0CEC00 2px solid;
+}
+
+#skills h2 {
+    margin-top: 0;
+}
+
+#skills h3 {
+    font-size: 1.8rem;
+    color: white;
+    text-align: center;
+    display: inline-block;
+    background: black;
+}
+
+#practical-skills h3 {
+    margin-bottom: 5%;
+    display: inline-block;
+    background: black;
+    text-align: center;
+}
+
+.title-container {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+.programming-languages {
+    z-index: 2;
+    position: relative;
+
+
+    width: 100px; 
+    height: 100px; 
+}
+
+/* not dispersed images should be all clumped together in the middle */
+.programming-languages:not(.dispersed) img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.subsection-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10%;
+}
+
+/* add a smooth transition for the icon movement */
+.programming-languages img {
+    transition: transform 1s ease;
+}
+
+/* when they are not dispersed, they are arranged in a flex row */
+.programming-languages.dispersed {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+/* change the size values based on the window so the icons fit */
+@media screen and (max-width: 767.99px) {
+
+    .programming-languages.dispersed {
+        width: 20px;
+        height: 100px;
+        justify-content: center;
+    }
+
+    .programming-languages:not(.dispersed) {
+        width: 100px;
+        height: 100px;
+    }
+
+    .programming-languages.dispersed img {
+        width: 50px;
+        height: 50px;
+        margin: 0 5px;
+    }
+
+    #tool-icons {
+        width: 60%;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199.9px) {
+    .programming-languages.dispersed {
+        width: 100%;
+        height: 100px;
+        justify-content: space-evenly;
+    }
+
+    .programming-languages:not(.dispersed) {
+        width: 100px;
+        height: 100px;
+    }
+
+    .programming-languages.dispersed img {
+        width: 50px;
+        height: 50px;
+        margin: 0 5px;
+    }
+
+    #tool-icons {
+        width: 60%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+
+    .programming-languages.dispersed img {
+        transition: transform ease-in 1s;
+    }
+
+    .programming-languages.dispersed {
+        width: 100%;
+    }
+
+    #tool-icons {
+        width: 40%;
+    }
+
+}
+
+/* arrange the tools icons and add hover effect */
+#tool-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    z-index: 2;
+}
+
+#tool-icons img {
+    transform: scale(1.4);
+    transition: transform 0.4s ease;
+}
+
+#tool-icons img:hover {
+    transform: scale(2);
+    transition: transform 0.4s ease;
+}
+
+
+/* @keyframes lean {
+    0%, 100% {
+        transform: rotate(-18deg) scale(0.5);
+        animation-timing-function: ease-in-out;
+    }
+    25%, 75% {
+        transform: rotate(0deg) scale(0.5);
+        animation-timing-function: ease-in-out;
+    }
+    50% {
+        transform: rotate(18deg) scale(0.5);
+        animation-timing-function: ease-in-out;
+    }
+} */
+
+/* this element holds the matrix-like background. It's logic is held in javascript */
+#Matrix {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/*---------------------experience section-------------------------*/
+
+#experience {
+    padding-bottom: 10%;
+    border-bottom: #0CEC00 2px solid;
+}
+
+#experience-content {
+    display: flex;
+    justify-content: center;
+}
+
+/* put the list items into a column */
+#experience ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    color: white;
+    width: 75%;
+}
+
+/* each item is styled as a row of two */
+#experience ul li {
+    margin: 20px 0;
+    padding: 10px 0 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+/* add the hover effects for the icons and windows */
+#experience ul li:hover .window {
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.7);
+    transform: scale(1.05);
+    transition: transform 0.4s ease;
+
+}
+
+#experience ul li:hover .experience-icon i {
+    color: #0CEC00;
+    font-size: 1.8em;
+    transition: font-size 0.4s ease;
+
+}
+
+#experience ul li .window {
+    box-shadow: none;
+    transform: scale(1);
+    transition: transform 0.4s ease;
+}
+
+#experience ul li .experience-icon i {
+    color: #FFFFFF;
+    font-size: 1.2em;
+    transition: font-size 0.4s ease;
+}
+
+.experience-icon {
+    font-size: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* style the experience description window */
+.window {
+    margin-left: 50px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 50%;
+    padding: 10px 0;
+    margin: 10px 0;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: flex-start;
+    padding: 0 8px;
+    margin-bottom: 10px;
+}
+
+.experience-message {
+    border-top: white 1px solid;
+    padding:10px;
+    font-size: 1.1rem;
+}
+
+.circle {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.green {
+    background: green;
+}
+
+.orange {
+    background: orange;
+}
+
+.red {
+    background: red;
+}
+
+/*-------------------contact section-------------------------*/
+
+/* change the placement of the terminal based on the device */
+@media screen and (max-width: 767.99px) {
+    #chat-window {
+        bottom: 1%;
+        right: 1%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    #chat-window {
+        bottom: 1%;
+        right: 21%;
+    }
+}
+
+footer {
+    position: relative;
+}
+
+#contact {
+    position: relative;
+    padding-bottom: 10%;
+    border-bottom: #0CEC00 2px solid;
+}
+
+#contact p {
+    margin-bottom: 10px;
+}
+
+#contact-content {
+    color: white;
+}
+
+#contact-content {
+    margin-left: 50px;
+    font-size: large;
+    margin-bottom: 60px;
+}
+
+/* button for opening the chat */
+#contact-button {
+    border: none;
+    background: none;
+    font-size: 25px;
+    color: white;
+    transition: transform 0.4s ease;
+}
+
+#contact-button:hover {
+    color: #0CEC00;
+    transform: scale(1.2);
+    transition: transform 0.4s ease;
+    cursor: pointer;
+}
+
+/* styling for the chat window */
+#chat-window {
+    position: fixed;
+    width: 500px;
+    height: 300px;
+    border: 1px solid #0CEC00;
+    background-color: #000000;
+    padding: 10px;
+    padding: 10px;
+    z-index: 5;
+}
+
+#chat-messages {
+    height: 258px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+    border: 1px solid white;
+    display: flex;
+    background-color: #000000;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 5px;
+}
+
+#chat-form {
+    background: none;
+    border: none;
+    width: 100%;
+}
+
+#chat-input {
+    background: none;
+    border: 1px solid white; /* leave the input border so user can see where to write */
+    color: white;
+    outline: none;
+    font-size: 1em;
+    height: 20px;
+    width: 70%;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* simulate linux terminal */
+#input-wrapper::before {
+    content: 'guest@user$ ';
+    color: #0CEC00;
+}
+
+#chat-messages p {
+    color: white;
+    margin: 0;
+}
+
+#chat-bar {
+    background-color: #0CEC00;
+    padding: 5px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#chat-close-button {
+    background-color: #FF0000;
+    color: white;
+    border: none;
+    padding: 0 5px;
+    cursor: pointer;
+}
+
+#social-media {
+    margin-left: 10%;
+}
+
+.social-media-icon {
+    margin: 0 10px;
+    border: none;
+    background: none;
+    font-size: 25px;
+    color: white;
+    font-size: 40px;
+    top: 120%;
+    left: 5%;
+    transition: font-size 0.5s ease;
+}
+
+/* add hover effect for the social media icons */
+.social-media-icon:hover {
+    color: #0CEC00;
+    font-size: 3em;
+    transition: font-size 0.5s ease;
+}
+
+#copyright {
+    text-align: center;
+    background-color: #000000;
+    z-index: 5;
+    padding: 20px 0;
+}
+
+
+/*-------------------end of footer section-------------------------*/

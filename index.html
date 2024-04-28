@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Personal Website of Ondrej Kozanyi</title>
+        <link rel="icon" href="https://skillicons.dev/icons?i=pug">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div id="navigation" class="tucked">
+            <nav>
+                <ul>
+                    <li><a href="index.html">./Home</a></li>
+                    <li><a href="#about">./About</a></li>
+                    <li><a href="#education">./Education</a></li>
+                    <li><a href="#skills">./Skills</a></li>
+                    <li><a href="#experience">./Experience</a></li>
+                    <li><a href="#contact">./Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div id="nav-overlay"></div>
+        <button id="burger-button">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <div id="page-body">
+            <div id="main-content">
+                <div id="intro">
+                    <div id="title-and-info">
+                        <pre id="main-title">
+  ___            _           _   _  __                         _ 
+ / _ \ _ __   __| |_ __ ___ (_) | |/ /___ ______ _ _ __  _   _(_)
+| | | | '_ \ / _` | '__/ _ \| | | ' // _ \_  / _` | '_ \| | | | |
+| |_| | | | | (_| | | |  __/| | | . \ (_) / / (_| | | | | |_| | |
+ \___/|_| |_|\__,_|_|  \___|/ | |_|\_\___/___\__,_|_| |_|\__, |_|
+                          |__/                           |___/   
+                        </pre>
+                        <section id="about">
+                            <div id="my_info">
+                                <h2>About Me</h2>
+                                <button id="toggle-button"><i class="fa-solid fa-circle-info"></i></button>
+                            </div>
+                            <div id="terminal-window" style="visibility: hidden;">
+                                <div id="terminal-bar">
+                                    <button id="close-button">x</button>
+                                </div>
+                                <p class="hidden">
+                                </p>
+                            </div>
+                            <div id="social-media-intro">
+                        
+                                <a href="https://github.com/OndriiK" target="_blank" class="social-media-icon">
+                                    <i class="fab fa-github"></i></a>
+                                <a href="https://www.instagram.com/_ondrejkozanyi_/" target="_blank" class="social-media-icon">
+                                    <i class="fab fa-instagram"></i></a>
+                            </div>
+                        </section>
+                    </div>
+                    <img src="./img/me.JPG" alt="Your Image">
+                </div>
+                <section id="education">
+                    <h2>Education</h2>
+                    <ul>
+                        <li>
+                            <span>VUT FIT, Bachelors degree</span>
+                            <button class="description-toggle-button">
+                                <i class="fa-solid fa-folder-open"></i>
+                            </button>
+                            <div class="overlay"></div>
+                            <button class="close-button">
+                                <i class="fa-solid fa-xmark"></i>
+                            </button>
+                            <p class="education-paragraph">Princeton University, lorem ipsum dolor sit amet consectetur adipiscing elit semper malesuada tincidunt blandit felis maecenas eleifend aliquam fames curabitur massa cubilia varius id tempor class a sollicitudin morbi feugiat fermentum efficitur rutrum proin suspendisse egestas curae odio at netus vivamus ad metus libero porttitor neque aenean euismod potenti porta</p>
+                            <div class="year">
+                                2022-NOW
+                            </div>
+                        </li>
+                        <li>
+                            <span>
+                                Summer School of Programming certificate
+                            </span>
+                            <button class="description-toggle-button">
+                                <i class="fa-solid fa-folder-open"></i>
+                            </button>
+                            <div class="overlay"></div>
+                            <button class="close-button">
+                                <i class="fa-solid fa-xmark"></i>
+                            </button>
+                            <p class="education-paragraph">Princeton University, lorem ipsum dolor sit amet consectetur adipiscing elit semper malesuada tincidunt blandit felis maecenas eleifend aliquam fames curabitur massa cubilia varius id tempor class a sollicitudin morbi feugiat fermentum efficitur rutrum proin suspendisse egestas curae odio at netus vivamus ad metus libero porttitor neque aenean euismod potenti porta</p>
+                            <div class="year">
+                                2022-2022
+                            </div>
+                        </li>
+                        <li>
+                            <span>
+                                Grammar School Bilikova 24
+                            </span>
+                            <button class="description-toggle-button">
+                                <i class="fa-solid fa-folder-open"></i>
+                            </button>
+                            <div class="overlay"></div>
+                            <button class="close-button">
+                                <i class="fa-solid fa-xmark"></i>
+                            </button>
+                            <p class="education-paragraph">California Institute of Technology, lorem ipsum dolor sit amet consectetur adipiscing elit semper malesuada tincidunt blandit felis maecenas eleifend aliquam fames curabitur massa cubilia varius id tempor class a sollicitudin morbi feugiat fermentum efficitur rutrum proin suspendisse egestas curae odio at netus vivamus ad metus libero porttitor neque aenean euismod potenti porta</p>
+                            <div class="year">
+                                2013-2022
+                            </div>
+                        </li>
+                    </ul>
+                </section>               
+                <section id="skills">
+                    <h2>Skills</h2>
+                    <section id="programming-languages">
+                        <div class="title-container">
+                            <h3>Programming Languages</h3>
+                        </div>
+                        <div class="subsection-content">
+                            <div class="programming-languages">
+                                <img src="https://skillicons.dev/icons?i=html">
+                                <img src="https://skillicons.dev/icons?i=css">
+                                <img src="https://skillicons.dev/icons?i=js">
+                                <img src="https://skillicons.dev/icons?i=c">
+                                <img src="https://skillicons.dev/icons?i=cpp">
+                                <img src="https://skillicons.dev/icons?i=cs">
+                                <img src="https://skillicons.dev/icons?i=dotnet">
+                                <img src="https://skillicons.dev/icons?i=python">
+                            </div>
+                        </div>
+                    </section>
+                    <section id="practical-skills">
+                        <div class="title-container">
+                            <h3>Practical Skills</h3>
+                        </div>
+                        <div class="subsection-content">                         
+                            <div id="tool-icons">
+                                <img src="https://skillicons.dev/icons?i=linux">
+                                <img src="https://skillicons.dev/icons?i=unity">
+                                <img src="https://skillicons.dev/icons?i=selenium">
+                                <img src="https://skillicons.dev/icons?i=qt">
+                            </div>
+                        </div>
+                    </section>
+                    <canvas id="Matrix"></canvas>
+                </section>            
+                <section id="experience">
+                    <h2>Experience</h2>
+                    <div id="experience-content">
+                    
+                        <ul>
+                            <li>
+                                <div class="window">
+                                    <div class="top-bar">
+                                        <span class="circle red"></span>
+                                        <span class="circle orange"></span>
+                                        <span class="circle green"></span>
+                                    </div>
+                                    <div class="experience-message">
+                                        
+                                        Participated in an enriching study program in the USA for a semester
+                                    </div>
+                                </div>
+                                <div class="experience-icon">
+                                    <i class="fa-solid fa-flag-usa"></i>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="experience-icon">
+                                    <i class="fa-solid fa-sim-card"></i>
+                                </div>
+                                <div class="window">
+                                    <div class="top-bar">
+                                        <span class="circle red"></span>
+                                        <span class="circle orange"></span>
+                                        <span class="circle green"></span>
+                                    </div>
+                                    <div class="experience-message">
+                                        Interned for a startup phone carrier complany
+                                    </div>
+
+                                </div>
+                            </li>
+                            <li>
+                                <div class="window">
+                                    <div class="top-bar">
+                                        <span class="circle red"></span>
+                                        <span class="circle orange"></span>
+                                        <span class="circle green"></span>
+                                    </div>
+                                    <div class="experience-message">   
+                                        Currently workig for an IT services firm developing 3D scene logic in Unity
+                                    </div>
+                                </div>
+                                <div class="experience-icon">
+                                    <i class="fa-solid fa-brain"></i>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+            <footer>
+                <section id="contact">
+                    <h2>Contact</h2>
+                    <div id="contact-content">
+                        <p>Email: ondrej.kozanyi@gmail.com</p>
+                        <span>Or Contact Me Directly: <button id="contact-button"><i class="fa-solid fa-comments"></i></button></span>
+                        <div id="chat-window" style="display: none;">
+                            <div id="chat-bar">
+                                <button id="chat-close-button">x</button>
+                            </div>
+                            <div id="chat-messages">
+                                <form id="chat-form">
+                                    <div id="input-wrapper">
+                                        <input id="chat-input" type="text" autocomplete="off">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="social-media">
+                        <a href="https://github.com/OndriiK" target="_blank" class="social-media-icon">
+                            <i class="fab fa-github"></i></a>
+                        <a href="https://www.instagram.com/_ondrejkozanyi_/" target="_blank" class="social-media-icon">
+                            <i class="fab fa-instagram"></i></a>
+                    </div>
+                </section>
+                <p id="copyright">&copy; 2024 Ondrej Kozanyi</p>
+            </footer>
+        </div>
+        <script src="animation.js"></script>
+        <script src="buttons.js"></script>
+        <script src="scroll.js"></script>
+        <script src="matrix.js"></script>
+    </body>
+</html>
